@@ -1,0 +1,9 @@
+<div class="cat-sw-bck">
+<h1><%= @title.name %> Articles</h1>
+<h3><%= @title.articles.count %> total articles in this section </h3>
+<ul>
+	<% @title.articles.order(:title).each do |article| %>
+	<li><%= link_to article.title,article %></li>
+	<% end %>
+	</ul>
+	</div>

@@ -15,6 +15,6 @@ for i in 0..49
 	content = Faker::Lorem.paragraph(word_count=250)
 
 	# randomly assign one of the categories we just created 
-	category = Category.first(offset: rand(Category.count)) 
+	category = Category.all.sample
 	a = Article.create(title: title, content: content, categories: [category,])
 end
